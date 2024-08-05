@@ -55,17 +55,10 @@ in {
     services.kanata = mkIf cfg.enable {
       enable = true;
 
-      keyboards = {
-        akl = mkIf (cfg.variant == "ansi") {
-          extraDefCfg = defCfg;
-          config = cfg.layoutConfig + cfg.config;
-          inherit (cfg) devices;
-        };
-        akljis = mkIf (cfg.variant == "jis") {
-          extraDefCfg = defCfg;
-          config = cfg.layoutConfig + cfg.config;
-          inherit (cfg) devices;
-        };
+      keyboards.akl = {
+        extraDefCfg = defCfg;
+        config = cfg.layoutConfig + cfg.config;
+        inherit (cfg) devices;
       };
     };
   };
