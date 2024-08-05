@@ -1,6 +1,6 @@
 # AKL Flake
 
-Not tested.
+Only tested with vitrimak.
 PRs to add more layouts, ISO support, etc are welcome
 
 ## Quick Start
