@@ -6,7 +6,7 @@ with lib; let
   imports = mapAttrsToList toImport (filterAttrs filterCaches (builtins.readDir folder));
 in {
   options.akl.layoutConfig = mkOption {
-    default = types.str;
+    type = types.str;
   };
   inherit imports;
 }
